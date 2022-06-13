@@ -42,34 +42,34 @@ always study
   + FULL
     + 명시한 테이블을 스캔할 때, 전체 테이블을 스캔하도록 지시하는 힌트이다.
     + where절에 명시된 조건식에 맞는 인덱스가 있더라도 전체 테이블 스캔을 사용한다.
-    + /*+ FULL(tablespec)*/
-    + select /*+FULL(T1)*/ * from T1;
+    + ```/*+ FULL(tablespec)*/```
+    + ```select /*+FULL(T1)*/ * from T1;```
   + INDEX
     + 명시한 테이블을 스캔할 때, 명시한 인덱스를 사용하여 인덱스 스캔을 하도록 지시하는 힌트.
-    + /*+ INDEX(tablespec→indexspec) */
-    + select /*+INDEX(T1 T1_INDEX)*/ * from T1;
+    + ```/*+ INDEX(tablespec→indexspec) */```
+    + ```select /*+INDEX(T1 T1_INDEX)*/ * from T1;```
   + NO_INDEX
     + 명시한 테이블을 스캔할 때, 명시한 인덱스를 사용하는 인덱스 스캔을 하지 않도록 지시하는 힌트이다. 만일 NO_INDEX 힌트와 INDEX 또는 INDEX_ASC, INDEX_DESC 힌트가 동일한 인덱스를 명시한다면 나머지 두 힌트를 모두 무시
-    + /*+ NO_INDEX(tablespec→indexspec)*/
+    + ```/*+ NO_INDEX(tablespec→indexspec)*/```
   + INDEX_ASC
     + Tibero의 인덱스 스캔의 기본 동작이 오름차순이기 때문에 INDEX_ASC는 INDEX와 동일한 작업을 수행한다.
     + 범위 스캔을 사용하는 경우에는 인덱스를 오름차순으로 스캔하도록 한다.
     + 분할된 인덱스의 경우 분할된 각 영역 내에서 오름차순으로 스캔한다.
-    + /*+ INDEX_ASC(tablespec→indexspec)*/
+    + ```/*+ INDEX_ASC(tablespec→indexspec)*/```
   + INDEX_DESC
-    + /*+INDEX_DESC(tablespec→indexspec)*/
+    + ```/*+INDEX_DESC(tablespec→indexspec)*/```
   + INDEX_FFS
-    + /*+ INDEX_FFS(tablespec→indexspec)*/
+    + ```/*+ INDEX_FFS(tablespec→indexspec)*/```
     + index fast full scan
   + NO_INDEX_FFS
   + INDEX_RS
     + 명시한 테이블에 대해 명시한 인덱스를 사용하여 범위 인덱스 스캔(Range Index Scan)을 사용하도록 지시하는 힌트.
-    + /*+ INDEX_RS(tablespec→indexspec)*/
+    + ````/*+ INDEX_RS(tablespec→indexspec)*/```
   + NO_INDEX_RS
   + INDEX_SS
-    + /*+ INDEX_SS(tablespec→indexspec)*/
+    + ```/*+ INDEX_SS(tablespec→indexspec)*/```
     + index skip scan
   + NO_INDEX_SS
-    + /*+ NO_INDEX_SS(tablespec→indexspec)*/
+    + ```/*+ NO_INDEX_SS(tablespec→indexspec)*/```
   + INDEX_JOIN
     + 명시한 테이블에 대해 명시한 두 개 이상의 힌트를 사용하여(?), 테이블을 스캔할 때 self join을 사용하도록 지시하는 힌트.
