@@ -64,7 +64,7 @@ always study
   + NO_INDEX_FFS
   + INDEX_RS
     + 명시한 테이블에 대해 명시한 인덱스를 사용하여 범위 인덱스 스캔(Range Index Scan)을 사용하도록 지시하는 힌트.
-    + ````/*+ INDEX_RS(tablespec→indexspec)*/```
+    + ```/*+ INDEX_RS(tablespec→indexspec)*/```
   + NO_INDEX_RS
   + INDEX_SS
     + ```/*+ INDEX_SS(tablespec→indexspec)*/```
