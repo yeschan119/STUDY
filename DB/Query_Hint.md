@@ -121,4 +121,9 @@ always study
       + ```/*+NL_SJ*/```
     + NL_AJ
       + ```/*+ NL_AJ*/```
-  + 
+  + SWAP_JOIN_INPUTS
+    + Hash Join을 수행하는 경우 명시한 테이블을 사용하여 Hash Table을 빌드하도록 지시하는 힌트
+    + ```/*+ SWAP_JOIN_INPUTS(tablespec)*/```
+  + NO_ SWAP_JOIN_INPUTS
+    + Hash Join을 수행하는 경우 Join 순서가 바뀌는 경우, 명시한 테이블이 해시 테이블로 빌드되지 않도록 지시하는 힌트
+    + ```/*+ NO_SWAP_JOIN_INPUTS(tablespec)*/```
