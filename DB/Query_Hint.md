@@ -73,3 +73,13 @@ always study
     + ```/*+ NO_INDEX_SS(tablespec→indexspec)*/```
   + INDEX_JOIN
     + 명시한 테이블에 대해 명시한 두 개 이상의 힌트를 사용하여(?), 테이블을 스캔할 때 self join을 사용하도록 지시하는 힌트.
+
+## JOIN 순서
+  + Leading, Ordered는 조인 순서를 결정하는 힌트이다. Leading 힌트가 Ordered보다 Query Optimizer를 선택할 수 있는 폭이 넓어서 Leading을 사용하는 것이 좋다.
+  + LEADING
+    + 조인에서 먼저 조인되어야 할 테이블의 집합을 명시하는 힌트.
+    + Leading 힌트가 먼저 조인될 수 없는 테이블을 포함하는 경우 무시한다.
+    + Leading 힌트끼리 충돌하는 경우에는 Leading, Ordered 힌트가 모두 무시된다.
+    + Ordered 힌트가 사용되는 경우에는 Leading 힌트는 모두 무시된다.
+## 조인 방법
+  + 
