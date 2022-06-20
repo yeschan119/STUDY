@@ -86,16 +86,21 @@ always study
   + 조인 방법이 적용된 힌트는 명시한 테이블이 **조인의 내부 테이블**로 사용될 경우에만 참조된다.
   + USE_NL
     + 명시한 테이블을 다른 테이블과 조인하는 경우 Nested Loop Join을 사용하도록 지시
-    + /*+ USE_NL(tablespec)*/
+    + ```/*+ USE_NL(tablespec)*/```
   + NO_USE_NL
-    + /*+NO_USE_NL(tablespec)*/
+    + ```/*+NO_USE_NL(tablespec)*/```
   + USE_NL_WITH_INDEX
     + 명시한 테이블을 다른 테이블과 조인하는 경우 중첩 루프 조인을 사용하도록 지시하는 힌트.
     + 이때 명시한 테이블에 대한 접근은 명시한 인덱스와 두 테이블에 대한 조인 조건을 이용하여 이루어져야 한다.
     + 인덱스를 사용하는 경우이면 힌트는 무시
-    + /*+ USE_NL_WITH_INDEX(tablespec indexspec)*/
+    + ```/*+ USE_NL_WITH_INDEX(tablespec indexspec)*/```
   + USE_MERGE
     + MERGE JOIN을 유도
-    + /*+ USE_MERGE(tablespec)*/
+    + ```/*+ USE_MERGE(tablespec)*/```
   + NO_USE_MERGE
-    + /*+NO_USE_MERGE(tablespec)*/
+    + ```/*+NO_USE_MERGE(tablespec)*/```
+  + USE_HASH
+    + 명시한 테이블을 다른 테이블과 조인하는 경우 해시 조인을 사용하도록 지시하는 힌트
+    + ```/*+ USE_HASH(tablespec)*/```
+  + NO_USE_HASH
+    + ```/*+ NO_USE_HASH(tablespec)*/```
