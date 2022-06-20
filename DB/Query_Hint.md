@@ -82,4 +82,10 @@ always study
     + Leading 힌트끼리 충돌하는 경우에는 Leading, Ordered 힌트가 모두 무시된다.
     + Ordered 힌트가 사용되는 경우에는 Leading 힌트는 모두 무시된다.
 ## 조인 방법
-  + 
+  + 한 테이블에 대해서만 조인 방법을 지시한다.
+  + 조인 방법이 적용된 힌트는 명시한 테이블이 **조인의 내부 테이블**로 사용될 경우에만 참조된다.
+  + USE_NL
+    + 명시한 테이블을 다른 테이블과 조인하는 경우 Nested Loop Join을 사용하도록 지시
+    + /*+ USE_NL(tablespec)*/
+  + NO_USE_NL
+    + /*+NO_USE_NL(tablespec)*/
