@@ -104,3 +104,20 @@ always study
     + ```/*+ USE_HASH(tablespec)*/```
   + NO_USE_HASH
     + ```/*+ NO_USE_HASH(tablespec)*/```
+  + subquery unnest
+    + HASH_SJ
+      + subquery를 unnesting할 때 해시방법을 이용한 세미조인으로 하도록 지시하는 힌트
+      + ```/*+ HASH_SJ*/```
+    + HASH_AJ
+      + subquery를 unnesting 할 때 HASH방법을 이용한 anti join으로 하도록 지시하는 힌트
+      + ```/*+HASH_AJ*/```
+    + MERGE_SJ
+      + subquery를 unnesting할 때 Merge 방법을 이용한 semi join하도록 지시하는 힌트
+      + ```/*+ MERGE_SJ*/```
+    + MERGE_AJ
+      + subquery를 unneest할 때 Merge방법을 이용한 Anti Join하도록 지시하는 힌트
+      + ```/*+ MERGE_AJ*/```
+    + NL_SJ
+      + ```/*+NL_SJ*/```
+    + NL_AJ
+      + ```/*+ NL_AJ*/```
