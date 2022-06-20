@@ -1,5 +1,5 @@
 # STUDY
-always study
+always study🧑‍💻🧑‍💻
 
 ## DB 운영에서 필요한 지식 - 힌트
 ## Query를 사용할 때 원하는 방향(최적화)으로 쿼리를 실행시키기 위해 힌트를 사용
