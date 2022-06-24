@@ -127,3 +127,11 @@ always study🧑‍💻🧑‍💻
   + NO_ SWAP_JOIN_INPUTS
     + Hash Join을 수행하는 경우 Join 순서가 바뀌는 경우, 명시한 테이블이 해시 테이블로 빌드되지 않도록 지시하는 힌트
     + ```/*+ NO_SWAP_JOIN_INPUTS(tablespec)*/```
+## PARALLEL
+  + 병렬 쿼리는 **divide & conquer** 원리에 기초한다.
+  + PARALLEL
+    + 지정한 개수의 스레드를 사용해 query 수행을 병렬로 진행
+    + ```/*+ PARALLEL(integer)*/```
+  + NO_PARALLEL
+    + ```/*+ NO_PARALLEL*/```
+  +  
