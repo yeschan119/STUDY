@@ -153,4 +153,14 @@ always study🧑‍💻🧑‍💻
       + outer table의 distribute 방식
       + inner table의 distribute 방식
 ## 실체화 뷰(materialized view)
-  + 
+  + Rerwite
+    + query block에서 cost 비교 없이 MV를 사용하여 query의 다시 쓰기를 하도록 지시하는 힌트.
+    + MV 목록이 명시된 경우에는 목록에 있는 MV view만 사용하여 query rewrite을 시도한다.
+      + ```/*+Rewrite (tablespec)*/```
+  + No_Rewrite
+    + ```/*+(NO_REWRITE)*/```
+  + Materialize
+    + with 절 안에 있는 subquery를 MV로 만들도록 지시하는 힌트
+    + ```/*+ materialize*/```
+  + INLINE
+    + with절 안에 있는 subquery를 MV로 만들지 않도록 지시하는 힌트
