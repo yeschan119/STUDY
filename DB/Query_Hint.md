@@ -182,3 +182,15 @@ always study🧑‍💻🧑‍💻
   + CARD
     + optimizer에서 테이블의 cardinality를 명시해서 cost를 계산
     + ```/*+CARD(tablespec integer)*/```
+  + MONITOR
+    + 쿼리를 수행할 때 수행 정보를 모으도록 지시
+    + ```/*+MONITOR*/```
+  + USE_CONCAT
+    + OR EXPANSION 수행
+    + ```/*+ USE_CONCAT*/```
+  + NO_EXPAND
+    + OR Expansion 막는 힌트
+    + ```/*+NO_EXPAND*/```
+  + Result_Cache
+  + NO_SUBQUERY_CACHE
+  + OPT_PARAM
