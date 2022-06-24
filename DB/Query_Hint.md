@@ -152,3 +152,5 @@ always study🧑‍💻🧑‍💻
       + table - inner table 명
       + outer table의 distribute 방식
       + inner table의 distribute 방식
+## 실체화 뷰(materialized view)
+  + 
