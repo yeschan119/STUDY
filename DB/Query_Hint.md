@@ -134,4 +134,21 @@ always study🧑‍💻🧑‍💻
     + ```/*+ PARALLEL(integer)*/```
   + NO_PARALLEL
     + ```/*+ NO_PARALLEL*/```
-  +  
+  + PQ_DISTRIBUTE
+    + 병렬 조인은 **분배와 조인(Distribute & Join)**으로 진행된다.
+    + PQ_DISTRIBUTE 힌트는 JOIN 전에 분배하는 과정에만 관여하는 힌트
+    + 조인되는 두 테이블간의 파티션의 구성, 데이터 크기에 따라 병렬 조인을 수행하는 옵티마이져의 선택이 달라질 수 있다.
+    + 이 때 사용자가 직접 조인을 위한 데이터 분배 방식을 결정 할 수 있는 힌트.
+      + 사용 목적
+      + 옵티마이져가 파티션된 테이블을 적절히 활용하지 못하고 동적 재분할을 시도할 때
+      + 기존 파티션 키를 무시하고 다른 키 값으로 동작 재분할하고 싶을 때
+      + 통계정보가 부정확하거나 통계정보를 제공하기 어려운 상황에서 실행계획을 고정시고정시 할 때
+      + 기타 여러 가지 이유로 데이터 분배 방식을 변경하고 자 할 때
+    + ```/*+ PQ_DISTRIBUTTE(tablespec HASH HASH)*/```
+      + BROADCAST NONE ⇒ 왼쪽은 BROADCAST 오른쪽은 PE BLOCK ITERATOR의 분산 방법으로 동작
+      + NONE BROADCAST ⇒ 왼쪽 pe block iterator 오른쪽 broadcast
+      + NONE NONE ⇒ 양쪽 모두 Hash의 분산 방법으로 동작
+    + ```/*+ pq_distribute(table, outer_distribution, inner_distribution)*/```
+      + table - inner table 명
+      + outer table의 distribute 방식
+      + inner table의 distribute 방식
