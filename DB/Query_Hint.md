@@ -164,3 +164,21 @@ always study🧑‍💻🧑‍💻
     + ```/*+ materialize*/```
   + INLINE
     + with절 안에 있는 subquery를 MV로 만들지 않도록 지시하는 힌트
+## 기타
+  + APPEND
+    + DML 문장에서 직접 datafile에 추가하는 삽입방법, 즉 direct path방식을 수행하도록 지시하는 힌트
+    + direct path
+      + 일반적인 insert이 아닌 항상 새로운 데이터 블록을 할당 받아서 데이터 삽입을 수행하며, buffer cache를 이용하지 않고 직접 데이터 파일을 추가하기 때문에 성능 향상에 이점이 있다.
+  + APPEND_VALUES
+    + values 절을 사용하는 insert 문에서 직접 데이터 파일에 추가하는 insert 방법
+    + ```/*+ APPEND_VALUES*/```
+  + NOAPPEND
+    + ```/*+NOAPPEND*/```
+  + IGNORE_ROW_ON_DUPKEY_INDEX
+    + single table insert문에서만 사용 가능.
+    + INDEX가 UNIQUE 조건을 위배하면 에러를 발생시키지 않고 insert 하던 row를 rollback하고 다음 row부터 insert 재개
+    + index를 명시하지 않은 경우, 여러 인덱스를 명시한 경우, 명시된 인덱스가 unique 속성을 갖지 않는 경우에는 힌트이지만 에러 발생(?)
+    + 이 힌트를 명시하면 append, parallel 힌트는 무시
+  + CARD
+    + optimizer에서 테이블의 cardinality를 명시해서 cost를 계산
+    + ```/*+CARD(tablespec integer)*/```
