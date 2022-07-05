@@ -21,7 +21,7 @@ always study🧑‍💻🧑‍💻
       + 불필요한 조인을 찾아서 제거하는 기능을 막기
        ```
       + /*+ NO_JOIN_ELIMINATION*/
-      + select /*+ NO_JOIN_ELIMINATION*/ [T2.FK](http://T2.FK), T2.A from T1, T2 where T2.FK = T1.PK;
+      + select /*+ NO_JOIN_ELIMINATION*/ T2.A from T1, T2 where T2.FK = T1.PK;
        ```
   + STAR_TRANSFORMATION
     + star tranformation 이 가능할 경우 변형을 시도하도록 지시하는 힌트
