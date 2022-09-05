@@ -1,4 +1,4 @@
-1. DBMS 개요
+DBMS 개요
 <H2>1. Join</H2>
 * Nested Loop Join
   <strong><em>old classic join</em></strong>
@@ -62,7 +62,8 @@
   > 가장 단순한 격리 수준이지만 가장 엄격한 격리 수준
   > 성능 측면에서 동시 처리성능이 가장 낮다.
   > 완벽한 isolation level이지만 데이터베이스에서 거의 사용되지 않는다.
-2. Tibero structure 개요
+
+Tibero structure 개요
 
 <H2>Process & Thread</H2>
 
@@ -270,7 +271,8 @@
   2. Wlock은 노드 내에서, CWS는 노드간 Lock이다.
   3. 노드간 lock정보를 저장하는 자료구조의 일부 튜닝이 가능.
   * <em>Lock을 획득한 thread가 비정상 종료하면 다른 thread가 해당 lock을 원복 시켜 줌</em>
-3. DD/DDL Processing
+  
+DD/DDL Processing
 <H2>DD(Data Dictionary) Overview</H2>
 <em>DB를 운영하는데 필요한 meta data인 DD는 DDL을 수행하면서 여려 DD Table로 나뉘어 저장된다.</em>
 * <strong>DD Tables</strong>
