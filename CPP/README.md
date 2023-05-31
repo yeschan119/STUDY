@@ -1,6 +1,6 @@
 # C++ study page
 # purpose
-+ C++에서 요구되는 지식 향상
++ C++ 및 OOP 지식 향상
 # 교재 : Effective C++
 # 기간
 + 8주간 Effective C++ 교재 정독 및 실기 진행
@@ -16,3 +16,7 @@
   + compiler가 자체로 만들어낸 함수가 필요 없으면 확실히 사용을 금지시키자
     + 자동으로 제공하는 함수를 private으로 선언.
     + Uncopyable과 비슷한 기본 클래스 사용.
++ item7
+  + polymorphism class에서 소멸자는 반드시 virtual로 선언
+    + 어떤 클래스가 가상함수를 하나라도 갖고 있으면, 이 클래스의 소멸자도 가상 소멸자로 선언
+  + 기본 클래스가 아니거나 polymorphism 형태가 아닌 경우는 가상소멸자를 선언하면 안됨.
