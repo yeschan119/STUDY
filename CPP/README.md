@@ -60,3 +60,10 @@
 + item16
   + new, delete를 사용할 때는 형태를 반드시 맞추자
     + new에 []를 썼으면 delete도 []를 사용. 반대도 마찬가지
++ item17
+  + new 로 생성한 객체를 스마트 포인터로 넘길 때에는 별도의 문장을 만들어서 넘겨야 함
+  + 안그러면 예외 발생시 디버깅하기 힘든 자원 누출 초래
+    + processWidget(std::shared_ptr<Widget(new Widget), priority());를 수행할 때 shared_ptr는 다음과 같은 순서로 수행
+      + 'new Widget' 표현식을 실행하는 부분
+      + priority() 실행
+      + shared_ptr 생성자를 호출하는 부분
