@@ -1,7 +1,7 @@
 # C++ study page
 # purpose
 + C++ 및 OOP 지식 향상
-# 교재 : Effective C++
+# 교재 : Effective C++ Third Edition by Scott Meyers
 # 기간
 + 8주간 Effective C++ 교재 정독 및 실기 진행
 # ITEM LIST
@@ -77,3 +77,9 @@
 + item19
   + class 설계는 type 설계와 똑같이 취급
     + 클래스 설계는 타입 설계이다. 새로운 타입을 정의하기 전에, 이번 항목에 나온 모든 고려사항을 빠짐없이 점검
++ item20
+  + 값에 의한 전달 보다는 상수객체 참조자에 의한 전달 방식을 택해야 함
+    + 효율적이면서 복사손실 문제를 해결함
+    + STL 반복자, 함수 객체 타입에는 그냥 pass by value 사용
+    + 기본적으로 C++는 함수로부터 객체를 전달받거나 전달할 때 pass by value를 사용한다. 이러한 사본을 만들어 내는 원천은 복사 생성자.
+    + 이런 방법은 매우 고비용과 복사 손실(slicing problem)문제가 있음.
