@@ -1,4 +1,4 @@
-// define star craft marine's property & marine's activity
+// define star-craft marine's property & marine's activity
 #include <iostream>
 
 class Marine {
@@ -6,10 +6,12 @@ class Marine {
     int pos_x, pos_y; // marine position
     int damage;   // attack power
     bool is_dead;
+    char *name;    // marine name
 
     public:
         Marine();
-        Marine(int x, int y);
+        Marine(int x, int y, const char *marine_name);
+        ~Marine();
 
         int attack();
         void be_attacked(int damage);
@@ -24,7 +26,9 @@ Marine::Marine() {
     is_dead = false;
 }
 
-Marine::Marine(int x, int y) {
+Marine::Marine(int x, int y, const char* marine_name) {
+    name = new char[strlen(marine_name) + 1];
+    strcpy(name, marine_name);
     pos_x = x;
     pos_y = y;
     physical = 50;
@@ -50,16 +54,28 @@ void Marine::show_status() {
     std::cout << "Physical : " << physical << std::endl;
 }
 
-int main() {
-    Marine marine1(2, 3);
-    Marine marine2(3, 5);
+Marine::~Marine() {
+    std::cout << name << " 의 소멸자 호출!" << std::endl;
+    if (name != NULL)
+        delete[] name;
+}
 
-    marine1.show_status();
-    marine2.show_status();
+int main() {
+    Marine* marines[100];
+
+    marines[0] = new Marine(2, 3, "Marine 2");
+    marines[1] = new Marine(3, 5, "Marine 1");
+
+    marines[0]->show_status();
+    marines[1]->show_status();
 
     std::cout << std::endl << "마린 1 이 마린 2 를 공격! " << std::endl;
-    marine2.be_attacked(marine1.attack());
 
-    marine1.show_status();
-    marine2.show_status();
+    marines[0]->be_attacked(marines[1]->attack());
+
+    marines[0]->show_status();
+    marines[1]->show_status();
+
+    delete marines[0];
+    delete marines[1];
 }
