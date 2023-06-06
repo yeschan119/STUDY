@@ -1,8 +1,7 @@
 # C++ study page
 # purpose
 + C++ 및 OOP 지식 향상
-# 교재 : Effective C++ Third Edition
-  by Scott Meyers
+# 교재 : <text fond-size="12"><tspan fill="red">Effective C++ Third Edition by Scott Meyers</tspan></text>
 # 기간
 + 8주간 Effective C++ 교재 정독 및 실기 진행
 # ITEM LIST
