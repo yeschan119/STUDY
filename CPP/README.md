@@ -90,3 +90,8 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
     + 힙에 할당된 객체에 대한 참조자를 반환하는 일
     + 지역 정적 객체에 대한 포인터나 참조자를 반환하는 일
     + 위와 같은 객체가 두 개 이상 필요해질 가능성이 있다면 참조자로 반환하지 말자
++ item22
+  + 데이터 멤버가 선언될 것은 무조건 private 영역이다.
+    + 문법적 일관성
+    + 데이터 멤버의 접근성을 세밀하게 제어할 수 있음
+    + 캡슐화(encapsulation)
