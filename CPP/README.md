@@ -102,3 +102,5 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
       + 위 내용은 비프렌드 함수에만 적용
       + 비프렌드 함수는 캠슐화에 영향을 끼칠 것이기 때문.
       + namespace 사용하면 확장성이 높아짐
++ item24
+  + 다양한 연산을 하려면 비멤버 함수를 사용
