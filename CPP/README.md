@@ -104,3 +104,7 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
       + namespace 사용하면 확장성이 높아짐
 + item24
   + 다양한 연산을 하려면 비멤버 함수를 사용
++ item25
+  + 예외를 던지지 않는 SWAP에 대한 지원
+  + std::swap이 사용자 정의 타입에 대해 느리게 동작할 여지가 있다면 swap멤버 함수 제공
+  + std::swap의 경우 복사 생성자와 복사대입 연산자를 호출하므로 느림
