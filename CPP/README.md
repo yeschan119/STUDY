@@ -116,3 +116,8 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
     + 캡슐화 정도를 높이고
     + 상수 멤버 함수가 객체의 상수성을 유지한 채로 동작할 수 있고
     + 무효참조 핸들이 생기는 경우를 최소화할 수 있음
++ item29
+  + 예외 안전성은 잘 확보하자
+    + 기본적인 보장(basic garantee) 함수 동작 중에 예외가 발생하면 실행 중인 프로그램에 관련된 모든 것들을 유효한 상태로 유지.
+    + 강력한 보장(strong guarantee) 함수가 성공적으로 실행을 마친 후의 상태와 함수가 호출될 때의 상태만이 존재할 수 있다.
+    + 예외불가 보장(nothrow guarantee) 예외를 던지지 않겠다는 보장. 약속한 동작은 언제나 끝까지 완수하는 함수라는 뜻.
