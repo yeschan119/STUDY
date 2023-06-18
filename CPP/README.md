@@ -108,6 +108,6 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
   + 예외를 던지지 않는 SWAP에 대한 지원
   + std::swap이 사용자 정의 타입에 대해 느리게 동작할 여지가 있다면 swap멤버 함수 제공
   + std::swap의 경우 복사 생성자와 복사대입 연산자를 호출하므로 느림
-+ item25
++ item26
   + 변수 정의는 늦출 수 있을 때까지 늦추는 근성 발휘
     + 미리 선언했다가 중간에 에러 나면 사용이 안됨...
