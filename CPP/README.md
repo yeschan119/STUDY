@@ -111,6 +111,13 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
 + item26
   + 변수 정의는 늦출 수 있을 때까지 늦추는 근성 발휘
     + 미리 선언했다가 중간에 에러 나면 사용이 안됨...
++ item27
+  + casting은 웬만하면 피하기. 특히 dynamic_cast는 신중. 수행성능에 안좋음
+  + 피할 수 없으면 함수 안에 숨기거나 C++ 스타일 선호
+    + const_cast : 객체의 상수성(constness)를 없애는 용도로 사용
+    + dynamic_cast : 안전한 다운캐스팅(safe downcasting)을 할 때 사용함. 런타임 비용이 높다.
+    + reinterpret_cast : 포인터를 int로 바꾸는 등의 하부 수준 캐스팅을 위해 만들어진 연산자로, 적용 결과가 구현환경에 의존적.
+    + static_cast : 암시적 변환(비상수 객체를 상수 객체로, 혹은 int를 double로 등)을 강제로 진행할 때 사용. 타입 변환을 거꾸로 수행하는 용도로도 쓰임.(void *를 일반 타입의 포인터로)
 + item28
   + 어떤 객체의 내부요소에 대한 핸들(참조자, 포인터, 반복자) 를 반환하는 것은 조심하면
     + 캡슐화 정도를 높이고
