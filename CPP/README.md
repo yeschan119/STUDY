@@ -152,3 +152,8 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
   + public 상속 모형은 반드시 "is-a(...는 ...의 일종이다)"를 따르도록 만들자
     + 어떤 Base 클래스로부터 Derived 클래스가 public 상속을 받았다면, Derived 클래스는 Base 클래스보다 더 특수한 개념을 나타내게 된다. 사용처의 제한
     + public 상속이 신기한 이유는, 우리가 일반적으로 생각하고 있는 논리적인 개념과 충돌할 수 있기 때문이다.
++ item33
+  + 상속된 이름은 숨기지 말자
+    + 파생 클래스의 이름은 기본 클래스의 이름을 가린다.
+    + public 상속에서는 이런 이름 가림 현상은 바람직하지 않다.
+    + 가려진 이름을 다시 볼 수 있게 하는 방법으로, using 선언 혹은 전달 함수를 쓸 수 있다.
