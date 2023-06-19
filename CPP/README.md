@@ -148,3 +148,7 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
       + 따라서 코드가 매우 적은 함수만을 인라인 함수로 선언하는 것이 좋다.
 + item31
   + 파일 사이의 컴파일 의존성을 최대로 줄이자.
++ item32
+  + public 상속 모형은 반드시 "is-a(...는 ...의 일종이다)"를 따르도록 만들자
+    + 어떤 Base 클래스로부터 Derived 클래스가 public 상속을 받았다면, Derived 클래스는 Base 클래스보다 더 특수한 개념을 나타내게 된다. 사용처의 제한
+    + public 상속이 신기한 이유는, 우리가 일반적으로 생각하고 있는 논리적인 개념과 충돌할 수 있기 때문이다.
