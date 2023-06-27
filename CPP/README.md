@@ -177,3 +177,7 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
 + item37
   + 어떤 함수에 대해서도 상속받은 기본 매개 변수 값은 절대로 재정의 하지 말자
   + 이유는 override 할 때 함수는 dynamic binding 이지만 그 함수의 매개변수는 static binding이다.(성능을 위해서)
++ item38
+  + "has-a(...는...를 가짐)" 혹은 "is-implemented-in-terms-of(...는...를 써서 구현됨)"를 모형화할 때는 객체 합성을 사용하자
+  + 객체합성(object composition)의 의미는 public 상속이 가진 의미와 완전히 다르다.
+  + 응용 영역에서 객체 합성의 의미는 "has a" 이다. 구현 영역에서 is-implemented-in-terms-of의 의미를 갖는다.
