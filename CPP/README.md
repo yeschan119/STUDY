@@ -174,3 +174,6 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
 + item36
   + 상속받은 비가상 함수를 다시 재정의 하는 어리적은 짓은 하지 말자
   + 상속받은 클래스는 부모 클래스의 비가상 함수를 재정의 할 경우 그대로 재현해야 하므로 쓸모 없음
++ item37
+  + 어떤 함수에 대해서도 상속받은 기본 매개 변수 값은 절대로 재정의 하지 말자
+  + 이유는 override 할 때 함수는 dynamic binding 이지만 그 함수의 매개변수는 static binding이다.(성능을 위해서)
