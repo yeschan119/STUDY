@@ -210,3 +210,6 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
   + 아래와 같은 경우 타입 변환이 안됨
     + temp_ptr<Base> b1 = temp_ptr<Derived>(new Derived);
   + 멤버 함수에 함수 탬플릿을 사용하면 됨
++ item46
+  + 타입 변환이 바람직할 경우에는 비멤버 함수를 클래스 템플릿 안에 정의햐여 함
+  + 비멤버 함수를 클래스 안에 정의하는 방법은 friend를 사용
