@@ -181,3 +181,7 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
   + "has-a(...는...를 가짐)" 혹은 "is-implemented-in-terms-of(...는...를 써서 구현됨)"를 모형화할 때는 객체 합성을 사용하자
   + 객체합성(object composition)의 의미는 public 상속이 가진 의미와 완전히 다르다.
   + 응용 영역에서 객체 합성의 의미는 "has a" 이다. 구현 영역에서 is-implemented-in-terms-of의 의미를 갖는다.
++ item39
+  + private 상속은 심사숙고
+    + private 상속을 굳이 하는 경우는 비공개 멤버로 접근하거나 가상 함수를 재정의할 경우이다.
+    + EBO(Empty Base Optimization) 활성화를 위해 사용
