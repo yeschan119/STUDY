@@ -202,3 +202,6 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
 + item43
   + template으로 만들어진 기본 클래스 안의 이름에 접근하는 방법
     + template으로 만들어진 클래스를 상속 받아서 멤버 함수에 그냥 접근하면 안됨.
++ item44
+  + 매개변수에 독립적인 코드는 템플릿으로부터 분리
+  + 탬플릿 멤버 클래스를 계속 생성할 경우 같은 동작을 하는 함수가 계속 생성됨
