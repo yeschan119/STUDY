@@ -205,3 +205,7 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
 + item44
   + 매개변수에 독립적인 코드는 템플릿으로부터 분리
   + 탬플릿 멤버 클래스를 계속 생성할 경우 같은 동작을 하는 함수가 계속 생성됨
++ item45
+  + 탬플릿 멤버에 대한 암시적 변환은 알아서 발생하지 않음
+  + 아래와 같은 경우 타입 변환이 안됨
+    + temp_ptr<Base> b1 = temp_ptr<Derived>(new Derived);
