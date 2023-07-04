@@ -209,3 +209,4 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
   + 탬플릿 멤버에 대한 암시적 변환은 알아서 발생하지 않음
   + 아래와 같은 경우 타입 변환이 안됨
     + temp_ptr<Base> b1 = temp_ptr<Derived>(new Derived);
+  + 멤버 함수에 함수 탬플릿을 사용하면 됨
