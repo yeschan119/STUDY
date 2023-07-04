@@ -185,3 +185,7 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
   + private 상속은 심사숙고
     + private 상속을 굳이 하는 경우는 비공개 멤버로 접근하거나 가상 함수를 재정의할 경우이다.
     + EBO(Empty Base Optimization) 활성화를 위해 사용
++ item40
+  + 다중 상속은 심사숙고해서 사용하자
+    + 다중 상속은 단일 상속보다 복잡하다. 새로운 모호성 문제를 일으킬 뿐 아니라 가상 상속이 필요해질 수도 있다.
+    + 가상 상속을 쓰면 크기 비용, 속도 비용이 늘어나며 초기화 및 대입 연산의 복잡도가 커진다. 따라서 가상 기본 클래스에는 데이터를 두지 않는 것이 현실적으로 가장 실용적이다.
