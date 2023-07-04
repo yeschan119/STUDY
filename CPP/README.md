@@ -199,3 +199,6 @@ $${\color{red}Effective\space C++\space Third\space Edition}$$ by Scott Meyers
     + 템플릿 매개변수를 선언할 때, class 및 typename 은 서로 바꾸어 써도 무방하다.
     + 중첩 의존 타입 이름을 식별하는 용도에는 반드시 typename 을 사용한다.
       + 중첩 의존 이름이 기본 클래스 리스트에 있거나 멤버 초기화 리스트 내의 기본 클래스 식별자로 있는 경우에는 예외이다.
++ item43
+  + template으로 만들어진 기본 클래스 안의 이름에 접근하는 방법
+    + template으로 만들어진 클래스를 상속 받아서 멤버 함수에 그냥 접근하면 안됨.
