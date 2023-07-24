@@ -25,7 +25,7 @@
   + Cons
     + Relatively low UI performance
     + Frequent SDK updates.
-## Company that uses Flutter/Dart
+## Companies that uses Flutter/Dart
   + TOYOTA - embedded
   + BMW - Apps
   + EBAY Motors - Apps
