@@ -1,4 +1,4 @@
-# webtoon_flix
+# flutter study
 
 A new Flutter project.
 
