@@ -1,4 +1,4 @@
-# 책 읽기
+# 책 읽기📚
 ## 목적
 ### 회사일은 너~무 깊고 좁다. 1년에 한 번씩 이직하지 않는 한 개발에 대한 전체적인 이해와 지식을 얻기 힘듬.
 ### 아는 것들은 다시 한번 정리하면서 기록, 몰랐던 것들은 새롭게 기록
@@ -17,3 +17,26 @@
   + 일반적으로 서버에는 동시 접속이 진행되기 때문에 multi threading으로 구현되어야 함
   + 서버의 응답을 받아서 동작하는 함수를 클래스로 따로 구현하고 호출을 받을 때마다 new server_action() 할 수 있는데, 이렇게 하면 thread 제한에 걸릴 수 있기 때문에, Java의 경우 ThreadPoolExecutor() 기능 사용
     + ThreadPoolExecutor()는 요청할 때마다 new thread를 성하는 대신, 정해진 개수 안에서 thread 재사용이 가능
+    + <code>
+      public class HttpServerMultiThread { 
+        static ThreadPoolExecutor executorService = 
+              (ThreadPoolExecutor) Executors.newCachedThreadPool();
+   
+        final private static int PORT = 8080;
+   
+        public static void main(String[] args) throws Exception {
+          try (ServerSocket serverSocket = new ServerSocket(PORT)) {
+            while (true) {
+              try {
+                Socket client = serverSocket.accept();
+                //별도의 스레드에서 ServerHandler의 실행 함수 호출
+                executorService.submit(new ServerHandler(clent));
+              }
+              catch(Exception err) {
+              err.printStackTrace();
+              }
+            }
+          }
+        }
+      }
+      </code>
