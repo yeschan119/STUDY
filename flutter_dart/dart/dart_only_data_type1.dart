@@ -69,5 +69,5 @@ void main() {
   set_ex.add(1);
   print(set_ex); //중복되는 숫자는 추가 안되었음
 
-  //typde def
+  //type def
 }
