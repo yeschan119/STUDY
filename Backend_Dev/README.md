@@ -17,8 +17,7 @@
   + 일반적으로 서버에는 동시 접속이 진행되기 때문에 multi threading으로 구현되어야 함
   + 서버의 응답을 받아서 동작하는 함수를 클래스로 따로 구현하고 호출을 받을 때마다 new server_action() 할 수 있는데, 이렇게 하면 thread 제한에 걸릴 수 있기 때문에, Java의 경우 ThreadPoolExecutor() 기능 사용
     + ThreadPoolExecutor()는 요청할 때마다 new thread를 성하는 대신, 정해진 개수 안에서 thread 재사용이 가능
-    + <code>
-      public class HttpServerMultiThread { 
+    <code>public class HttpServerMultiThread { 
         static ThreadPoolExecutor executorService = 
               (ThreadPoolExecutor) Executors.newCachedThreadPool();
    
@@ -38,5 +37,4 @@
             }
           }
         }
-      }
-      </code>
+      } </code>
