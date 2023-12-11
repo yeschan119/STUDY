@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="alert-box" id="alert">
+            <p id="title">알림창</p>
+            <button id="close">닫기</button>
+        </div>
+        <button onclick="login_window('아이디','block')">아이디</button>
+        <button onclick="login_window('패스워드','block')">패스워드</button>
+
+        <script>
+            function control_button(display_option) {
+                document.getElementById('alert').style.display=display_option;
+            }
+            //onclick 대신 eventlistner 사용 가능
+            document.getElementById('close').addEventListener('click',function(){
+                document.getElementById('alert').style.display='none'; 
+            })
+
+            function login_window(msg, display) {
+                document.getElementById('title').innerHTML=msg;
+                document.getElementById('alert').style.display=display;
+            }
+        </script>
+    </body>
+</html>
