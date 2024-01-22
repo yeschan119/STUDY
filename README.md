@@ -1,2 +1,0 @@
-# STUDY
-always study
