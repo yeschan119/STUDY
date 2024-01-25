@@ -11,3 +11,17 @@
 .show{
     display: block;
 }
+
+.form__div{
+    margin: 1rem 1rem;
+}
+
+.form__div2 {
+    margin: 1rem 1rem;
+}
+
+.submit__button {
+    margin: 0 1rem;
+    background-color: rgb(24, 140, 202);
+    width: 100px;
+}
