@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+
+        <!--jquery-->
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <div style="overflow: hidden;">
+            <div class="slide-container">
+                <div class="slide-box">
+                    <img src="img/car1.png" alt="bus">
+                </div>
+                <div class="slide-box">
+                    <img src="img/car2.png" alt="motorcycle">
+                </div>
+                <div class="slide-box">
+                    <img src="img/car3.png" alt="suv">
+                </div>
+            </div>
+        </div>
+        
+        <div style="display: block;" class="slide-button">
+            <button class="slide-1">1</button>
+            <button class="slide-2">2</button>
+            <button class="slide-3">3</button>
+        </div>
+        
+        <script>
+            $('.slide-1').on('click', function() {
+                var img_num = $('.slide-container')[0].classList[1];
+                $('.slide-container')[0].classList.remove(img_num);
+                $('.slide-container')[0].classList.add('slide-img1');
+                console.log($('.slide-container')[0].classList[1]);
+            })
+            
+            $('.slide-2').on('click', function() {
+                var img_num = $('.slide-container')[0].classList[1];
+                $('.slide-container')[0].classList.remove(img_num);
+                $('.slide-container')[0].classList.add('slide-img2');
+                console.log($('.slide-container')[0].classList[1]);
+            })
+
+            $('.slide-3').on('click', function() {
+                var img_num = $('.slide-container')[0].classList[1];
+                $('.slide-container')[0].classList.remove(img_num);
+                $('.slide-container')[0].classList.add('slide-img3');
+                console.log($('.slide-container')[0].classList[1]);
+            })
+        </script>
+    </body>
+</html>
