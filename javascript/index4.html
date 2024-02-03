@@ -36,25 +36,28 @@
         </div>
         
         <script>
+            /*
+                아래처럼 특정 클래스의 css를 직접 조정할 수 있음
+                $('.slide-1').on('click', function() {
+                    $('.slide-container').css('transform', 'translateX(-100vw)');
+                });
+            */
             $('.slide-1').on('click', function() {
                 var img_num = $('.slide-container')[0].classList[1];
                 $('.slide-container')[0].classList.remove(img_num);
                 $('.slide-container')[0].classList.add('slide-img1');
-                console.log($('.slide-container')[0].classList[1]);
             })
             
             $('.slide-2').on('click', function() {
                 var img_num = $('.slide-container')[0].classList[1];
                 $('.slide-container')[0].classList.remove(img_num);
                 $('.slide-container')[0].classList.add('slide-img2');
-                console.log($('.slide-container')[0].classList[1]);
             })
 
             $('.slide-3').on('click', function() {
                 var img_num = $('.slide-container')[0].classList[1];
                 $('.slide-container')[0].classList.remove(img_num);
                 $('.slide-container')[0].classList.add('slide-img3');
-                console.log($('.slide-container')[0].classList[1]);
             })
         </script>
     </body>
