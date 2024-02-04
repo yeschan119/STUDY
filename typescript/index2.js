@@ -23,12 +23,5 @@ function narrow_func(x) {
         return x * 2;
     }
 }
-//narrowing을 쓰는 게 귀찮으면 아래처럼 assertion 쓰기
-//왼쪽에 있는 x를 number type으로 덮어씀.
-//as문법은 type이 확정일 때 쓰기 때문에 잘 쓰지 않기
-function assert_func(x) {
-    var array = [];
-    array[0] = x;
-}
 console.log(narrow_func(10));
 console.log(narrow_func('1'));
