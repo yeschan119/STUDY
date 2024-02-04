@@ -1,81 +1,16 @@
-.alert-box {
-    background-color: skyblue;
-    padding: 20px;
-    color: white;
-    border-radius: 5px;
-    display: none;
-}
-.list-group{
-    display: none;
-}
-.show{
-    display: block;
-}
 
-.form__div{
-    margin: 1rem 1rem;
-}
+#index6
 
-.form__div2 {
-    margin: 1rem 1rem;
+.outer_class {
+    width: 400px;
+    height: 500px;
+    background-color: burlywood;
 }
-
-.submit__button {
-    margin: 0 1rem;
-    background-color: rgb(24, 140, 202);
-    width: 100px;
-}
-
-#index4
-div {
-    display: inline;
-}
-.slide-container{
-    width: 300vw;
-    /*margin-left: -200vw;*/
-    /*transform: translateX(-100vw);  /* margin-left도 외쪽으로 slide 하지만 성능 측면에서 transition이 좋음*/
-    transition: all 1s;
-}
-
-.slide-img1 {
-    transform: translateX(0vw);
-}
-
-.slide-img2 {
-    transform: translateX(-100vw);
-}
-
-.slide-img3 {
-    transform: translateX(-200vw);
-}
-
-.slide-box {
-    width: 100vw;
-    float: left;   /*div 가로 정렬*/
-}
-
-.slide-box img {
+.product__container {
     width: 100%;
+    height: 100%;
 }
-
-.slide-1 {
-    width: 50px;
-    height: 30px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-.slide-2 {
-    width: 50px;
-    height: 30px;
-    margin-right: 1rem;
-}
-
-.slide-3 {
-    width: 50px;
-    height: 30px;
-}
-
-.slide-button {
-    margin-top: 1rem;
+.product__select {
+    height: 100%;
+    width: 100%;
 }
