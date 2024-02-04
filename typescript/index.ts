@@ -11,10 +11,14 @@ type OBJ_TYPE_LIST = {
 
 let my_name :string = 'Kang';
 let name_list :string[] = ['Kang', 'Ko'];
+let union_name_list :MY_TYPE[] = ['Kane', 35];
 let name_obj :{name? : string} = {name : 'Kane'};
 let name_obj2 : OBJ_TYPE = {name : 'Kang'};
 let comp_name :MY_TYPE = 'Kang';
 comp_name = 1234;
+
+let any_type :any;  //모든 타입을 다 받는 변수 virus type
+let unknown_type :unknown;  //unknown type
 
 //number type을 받아서 number type만 리턴해야하는 엄격한 타입
 function test_func(arg : number) : number {

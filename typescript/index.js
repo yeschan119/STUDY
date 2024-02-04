@@ -1,5 +1,6 @@
 var my_name = 'Kang';
 var name_list = ['Kang', 'Ko'];
+var union_name_list = ['Kane', 35];
 var name_obj = { name: 'Kane' };
 var name_obj2 = { name: 'Kang' };
 var comp_name = 'Kang';
