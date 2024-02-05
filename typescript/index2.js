@@ -22,6 +22,9 @@ function narrow_func(x) {
     else if (typeof (x) == 'number') {
         return x * 2;
     }
+    else {
+        return 0;
+    }
 }
 //narrowing을 쓰는 게 귀찮으면 아래처럼 assertion 쓰기
 //왼쪽에 있는 x를 number type으로 덮어씀.

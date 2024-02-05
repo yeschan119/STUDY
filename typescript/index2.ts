@@ -24,6 +24,9 @@ function narrow_func(x :number | string) : number | string{
     else if (typeof(x) == 'number') {
         return x * 2;
     }
+    else {
+        return 0;
+    }
 }
 
 //narrowing을 쓰는 게 귀찮으면 아래처럼 assertion 쓰기
