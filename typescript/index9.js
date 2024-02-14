@@ -4,7 +4,7 @@ console.log(test9);
 function test_func9(env) {
     console.log(env);
     try {
-        if (env.includes('IMS') | env.includes('Prod')) {
+        if (env.includes('IMS') || env.includes('Prod')) {
             console.log('IMS');
         }
         else {

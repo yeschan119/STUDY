@@ -21,19 +21,3 @@ var OOP2 = /** @class */ (function () {
 }());
 var user2 = new OOP2('Kang');
 var env = "IMS-Prod";
-function test(env) {
-    console.log(env);
-    try {
-        if (env == 'IMS') {
-            console.log('IMS');
-        }
-        else {
-            console.log('here');
-            throw new Error('ERROR BBB');
-        }
-    }
-    catch (error) {
-        throw new Error(error.message);
-    }
-}
-test(env);
