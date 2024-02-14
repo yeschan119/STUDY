@@ -23,3 +23,7 @@ class OOP2 {
 }
 
 let user2 = new OOP2('Kang')
+
+var env = "IMS-Prod"
+
+type TEST = 'A' | 'B'
